@@ -8,14 +8,36 @@
 
 
 
-<h1>Add employees</h1>
+<h1>Add Employees</h1>
 
 <form method="post">
-<div class="mt-3"> 
-    <label class="form-label"> name </label>
-    <input type="text" class="form-control" asp-for="First_Name" />
-</div>
 
-<div type="submit" class="mt-3 btn btn-primary"> Save</div>
+    <div class="mt-3">
+        <label class="form-label"> First Name </label>
+        <input type="text" class="form-control" asp-for="First_Name" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label"> Last Name </label>
+        <input type="text" class="form-control" asp-for="Last_Name" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label"> Date Of Birth </label>
+        <input type="text" class="form-control" asp-for="date_of_birth" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label"> Date Of Hire </label>
+        <input type="text" class="form-control" asp-for="date_of_hire" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label"> Department ID </label>
+        <input type="text" class="form-control" asp-for="deptid" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label"> Position </label>
+        <input type="text" class="form-control" asp-for="position" />
+    </div>
+    <div class="mt-3">
+        <button type="submit" class="btn btn-dark">Save</button>
+    </div>
 
 </form>

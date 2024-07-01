@@ -30,6 +30,7 @@
                 <td>@employees.date_of_hire</td>
                 <td>@employees.deptid</td>
                 <td>@employees.position</td>
+                <td><a class="btn btn-dark" asp-controller="Employees" asp-action="Edit" asp-route-id="@employees.Id">Edit</a></td>
             </tr>
         }
     </tbody>
