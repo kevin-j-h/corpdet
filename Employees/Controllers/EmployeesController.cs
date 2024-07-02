@@ -10,7 +10,7 @@ namespace Employees.Controllers
 
     {
         private readonly applicationdbcontext dbContext;
-        public EmployeesController(applicationdbcontext dbContext )
+        public EmployeesController(applicationdbcontext dbContext)
         {
             this.dbContext = dbContext;
         }
@@ -21,18 +21,22 @@ namespace Employees.Controllers
         {
             return View();
         }
-        [HttpPost]  
-        public async Task<IActionResult>  Add(AddEmployeesViewModel viewModel)
+        [HttpPost]
+        public async Task<IActionResult> Add(AddEmployeesViewModel viewModel)
         {
 
             var emp = new employees
             {
-                First_Name = viewModel.First_Name
+                First_Name = viewModel.First_Name,
+                Last_Name = viewModel.Last_Name,
+                date_of_birth = viewModel.date_of_birth,
+                date_of_hire = viewModel.date_of_hire,
+                deptid = viewModel.deptid,
+                position = viewModel.position
+
             };
             await dbContext.emps.AddAsync(emp);
             await dbContext.SaveChangesAsync();
-
-
 
             return View();
         }
@@ -41,8 +45,36 @@ namespace Employees.Controllers
         [HttpGet]
         public async Task<IActionResult> List()
         {
-           var Employees= await dbContext.emps.ToListAsync();
-           return View(Employees);
+            var Employees = await dbContext.emps.ToListAsync();
+            return View(Employees);
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            var emp = await dbContext.emps.FindAsync(id);
+
+            return View(emp);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(employees viewModel)
+        {
+            var emp = await dbContext.emps.FindAsync(viewModel.Id);
+
+            if (emp is not null)
+            {
+                emp.First_Name = viewModel.First_Name;
+                emp.Last_Name = viewModel.Last_Name;
+                emp.date_of_birth = viewModel.date_of_birth;
+                emp.date_of_hire = viewModel.date_of_hire;
+                emp.deptid = viewModel.deptid;
+                emp.position = viewModel.position;
+            }
+            await dbContext.SaveChangesAsync();
+            return RedirectToAction("List", "Employees");
         }
 
     }
