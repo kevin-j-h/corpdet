@@ -77,5 +77,18 @@ namespace Employees.Controllers
             return RedirectToAction("List", "Employees");
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Delete(employees viewModel)
+        {
+            var emps = await dbContext.emps
+                .AsNoTracking()
+                .FirstOrDefaultAsync(x => x.Id == viewModel.Id);
+            if (emps is not null)
+            {
+                dbContext.emps.Remove(viewModel);
+                await dbContext.SaveChangesAsync();
+            }
+            return RedirectToAction("List", "Employees");
+        }
     }
 }
