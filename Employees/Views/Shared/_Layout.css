@@ -1,0 +1,33 @@
+﻿
+body {
+    background-image: linear-gradient(to left, #91ddd9, #7fd5df, #72cde5, #6ec3e9, #73b8eb, #70baef, #6dbdf4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+
+.navbar {
+    margin: 0 auto;
+    max-width: 800hv;
+}
+
+.navbar-nav {
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #333;
+    font-size: 30px;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    transition: color 0.3s;
+    text-align: right;
+    .navbar-nav .nav-link:hover
+
+{
+    color: #007bff !important;
+}

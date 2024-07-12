@@ -4,35 +4,45 @@
 @{
 }
 @model List<Employees.Models.entities.employees>
-<h1> EMPLOYEES</h1>
-<table class="table">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Fname</th>
-            <th>Lname</th>
-            <th>date of join</th>
-            <th>dob</th>
-            <th>deptid</th>
-            <th>position</th>
 
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="col-md-10">
+        <div class="card shadow">
+            <div class="card-body">
+                <h1 class="card-title text-center form-check-label ">EMPLOYEES</h1>
 
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var employees in Model)
-        {
-            <tr>
-                <td>@employees.Id</td>
-                <td>@employees.First_Name</td>
-                <td>@employees.Last_Name</td>
-                <td>@employees.date_of_birth</td>
-                <td>@employees.date_of_hire</td>
-                <td>@employees.deptid</td>
-                <td>@employees.position</td>
-                <td><a class="btn btn-dark" asp-controller="Employees" asp-action="Edit" asp-route-id="@employees.Id">Edit</a></td>
-            </tr>
-        }
-    </tbody>
-    
-</table>
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Fname</th>
+                            <th>Lname</th>
+                            <th>Date of Join</th>
+                            <th>DOB</th>
+                            <th>Dept ID</th>
+                            <th>Position</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var employee in Model)
+                        {
+                            <tr>
+                                <td>@employee.Id</td>
+                                <td>@employee.First_Name</td>
+                                <td>@employee.Last_Name</td>
+                                <td>@employee.date_of_hire</td>
+                                <td>@employee.date_of_birth</td>
+                                <td>@employee.deptid</td>
+                                <td>@employee.position</td>
+                                <td>
+                                    <a class="btn btn-dark btn-sm btn-bordered" asp-controller="Employees" asp-action="Edit" asp-route-id="@employee.Id">Edit</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

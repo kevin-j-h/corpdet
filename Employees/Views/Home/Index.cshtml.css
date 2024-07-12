@@ -1,0 +1,13 @@
+﻿.text-center {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
+    font:status-bar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.body {
+    background-image: linear-gradient(to top, #351b70, #0058b0, #008dce, #00bec7, #12ebaa);
+}

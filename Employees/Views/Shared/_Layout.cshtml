@@ -3,16 +3,56 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Employees</title>
+    <title>@ViewData["Title"] FinCorp</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Employees.styles.css" asp-append-version="true" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
+<style>
+    body {
+        background-image: linear-gradient(to left, #91ddd9, #7fd5df, #72cde5, #6ec3e9, #73b8eb, #70baef, #6dbdf4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    }
+
+
+    .navbar {
+        margin: 0 auto;
+        max-width: 800hv; 
+        
+    }
+
+    .navbar-nav {
+        justify-content: flex-end;
+        margin-right: 10px;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        color: #333;
+        font-size:30px;
+    }
+
+    .navbar-nav .nav-link {
+        color: black;
+        font-size: 20px;
+        font-weight:400;
+
+        transition: color 0.3s; 
+        text-align: right; 
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff !important ;
+            
+        }
+
+
+</style>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light ">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Corporate</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FinCorp</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,11 +63,11 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Employees" asp-action="Add">Add</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Employees" asp-action="List">Employees</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Employees" asp-action="List">Employees</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Employees" asp-action="Add">Admin</a>
                         </li>
 
                     </ul>
@@ -42,11 +82,14 @@
     </div>
 
 
-    <footer class="border-top footer text-muted py-3">
+  <footer class="footer navbar-text">
         <div class="container text-center">
-            &copy; 2024 - Employees
+            &copy; FinCorp
         </div>
     </footer>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,0 +1,19 @@
+﻿
+.btn-bordered {
+    border: 2px solid #343a40; /* Adjust border color as needed */
+    transition: all 0.3s ease;
+}
+
+.btn-bordered:hover {
+    background-color: #343a40; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
+.card {
+    max-width: 800px; /* Adjust maximum width of the card */
+    padding: 20px; /* Add padding inside the card */
+}
+
+.vh-100 {
+    height: 60vh; /* Full viewport height */
+}
