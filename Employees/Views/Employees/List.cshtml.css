@@ -1,36 +1,35 @@
 ﻿.btn-bordered {
-    border: 2px solid #343a40; /* Adjust border color as needed */
+    border: 2px solid #343a40; 
     transition: all 0.3s ease;
 }
 
     .btn-bordered:hover {
-        background-color: #343a40; /* Change background color on hover */
-        color: #ffffff; /* Change text color on hover */
+        background-color: #343a40; 
+        color: #ffffff; 
     }
 
 
 
 .vh-100 {
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
 }
 
 .table {
-    margin-bottom: 0;
- 
+    margin-bottom: 0; 
+    box-shadow:70%;
 }
 
 .thead-dark th {
-    background-color: #343a40;
+    background-color: #343a40; 
     color: #ffffff;
 }
 
 .card-title {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 300; 
+}
 
 .card {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
