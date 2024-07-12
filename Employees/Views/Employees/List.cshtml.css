@@ -15,15 +15,22 @@
 }
 
 .table {
-    margin-bottom: 0; /* Remove default margin */
+    margin-bottom: 0;
+ 
 }
 
 .thead-dark th {
-    background-color: #343a40; /* Dark background for table headers */
-    color: #ffffff; /* White text for headers */
+    background-color: #343a40;
+    color: #ffffff;
 }
 
 .card-title {
-    font-family: 'Roboto', sans-serif; /* Apply the Google Font */
-    font-weight: 300; /* Ensure the font weight matches the imported font */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+.card {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
